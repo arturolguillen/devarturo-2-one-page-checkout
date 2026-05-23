@@ -1,7 +1,9 @@
+import CardDetails from "@/components/CardDetails";
 import Column from "@/components/Column";
 import ContactInfo from "@/components/ContactInfo";
 import MainWrapper from "@/components/MainWrapper";
 import PaymentMethods from "@/components/PaymentMethods";
+import PaymentOptions from "@/components/PaymentOptions";
 import ShippingInfo from "@/components/ShippingInfo";
 import TopAppBar from "@/components/TopAppBar";
 import TopAppBarLogo from "@/components/TopAppBarLogo";
@@ -18,7 +20,10 @@ export default function Home() {
                 <Column className="w-full md:w-8/12 flex flex-col gap-8">
                     <ContactInfo />
                     <ShippingInfo />
-                    <PaymentMethods />
+                    <PaymentMethods>
+                        <PaymentOptions />
+                        <CardDetails />
+                    </PaymentMethods>
                 </Column>
                 <Column className="w-full md:w-4/12">
                     <></>
