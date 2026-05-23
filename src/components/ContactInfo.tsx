@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Card from "./Card";
 import CardBody from "./CardBody";
 import CardTitle from "./CardTitle";
@@ -7,8 +8,11 @@ import FormLabel from "./FormLabel";
 export default function ContactInfo() {
     return (
         <Card>
-            <CardTitle title={'Información de Contacto'} />
-            <CardBody className="space-y-4">
+            <CardBody>
+                <div className="flex justify-between items-center gap-2">
+                    <CardTitle>{'Información de Contacto'}</CardTitle>
+                    <Link href="#" className="text-xs uppercase tracking-widest text-indigo-600 font-semibold hover:underline">{'Iniciar Sesión'}</Link>
+                </div>
                 <FormGroup>
                     <FormLabel htmlFor="email">{'Correo Electrónico'}</FormLabel>
                     <input
