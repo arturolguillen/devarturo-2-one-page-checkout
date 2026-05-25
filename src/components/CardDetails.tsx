@@ -19,6 +19,35 @@ export default function CardDetails() {
                     </div>
                 </FormGroup>
             </div>
+            <FormGroup>
+                <FormLabel htmlFor="card_expiry">{'Fecha de expiración'}</FormLabel>
+                <input
+                    type="text"
+                    className="input"
+                    id="card_expiry"
+                    placeholder={'MM/AA'}
+                />
+            </FormGroup>
+            <FormGroup>
+                <FormLabel htmlFor="card_cvc">{'CVC'}</FormLabel>
+                <input
+                    type="text"
+                    className="input"
+                    id="card_cvc"
+                    placeholder={'123'}
+                />
+            </FormGroup>
+            <div className="md:col-span-2">
+                <FormGroup>
+                    <FormLabel htmlFor="cardholder_name">{'Nombre del titular'}</FormLabel>
+                    <input
+                        type="text"
+                        className="input"
+                        id="cardholder_name"
+                        placeholder={'Nombre como aparece en la tarjeta'}
+                    />
+                </FormGroup>
+            </div>
         </div>
     );
 }
