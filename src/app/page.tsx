@@ -1,3 +1,4 @@
+import Calculations from "@/components/Calculations";
 import CardDetails from "@/components/CardDetails";
 import Column from "@/components/Column";
 import ContactInfo from "@/components/ContactInfo";
@@ -11,6 +12,7 @@ import OrderItems from "@/components/OrderItems";
 import OrderSummay from "@/components/OrderSummary";
 import PaymentMethods from "@/components/PaymentMethods";
 import PaymentOptions from "@/components/PaymentOptions";
+import PromoCode from "@/components/PromoCode";
 import ShippingInfo from "@/components/ShippingInfo";
 import TopAppBar from "@/components/TopAppBar";
 import TopAppBarLogo from "@/components/TopAppBarLogo";
@@ -40,6 +42,8 @@ export default function Home() {
                                 <OrderItem key={product.id} product={product} />
                             ))}
                         </OrderItems>
+                        <PromoCode />
+                        <Calculations />
                     </OrderSummay>
                 </Column>
             </MainWrapper>
