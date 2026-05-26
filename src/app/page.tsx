@@ -6,12 +6,16 @@ import FooterCopy from "@/components/FooterCopy";
 import FooterLogo from "@/components/FooterLogo";
 import FooterMenu from "@/components/FooterMenu";
 import MainWrapper from "@/components/MainWrapper";
+import OrderItem from "@/components/OrderItem";
+import OrderItems from "@/components/OrderItems";
+import OrderSummay from "@/components/OrderSummary";
 import PaymentMethods from "@/components/PaymentMethods";
 import PaymentOptions from "@/components/PaymentOptions";
 import ShippingInfo from "@/components/ShippingInfo";
 import TopAppBar from "@/components/TopAppBar";
 import TopAppBarLogo from "@/components/TopAppBarLogo";
 import TopAppBarSteps from "@/components/TopAppBarSteps";
+import products from "@/products";
 
 export default function Home() {
     return (
@@ -30,7 +34,13 @@ export default function Home() {
                     </PaymentMethods>
                 </Column>
                 <Column className="w-full md:w-4/12">
-                    <></>
+                    <OrderSummay>
+                        <OrderItems>
+                            {products.map(product => (
+                                <OrderItem key={product.id} product={product} />
+                            ))}
+                        </OrderItems>
+                    </OrderSummay>
                 </Column>
             </MainWrapper>
             <Footer>
