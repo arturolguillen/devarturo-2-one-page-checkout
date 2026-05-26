@@ -10,6 +10,7 @@ import MainWrapper from "@/components/MainWrapper";
 import OrderItem from "@/components/OrderItem";
 import OrderItems from "@/components/OrderItems";
 import OrderSummay from "@/components/OrderSummary";
+import OrderTotal from "@/components/OrderTotal";
 import PaymentMethods from "@/components/PaymentMethods";
 import PaymentOptions from "@/components/PaymentOptions";
 import PromoCode from "@/components/PromoCode";
@@ -44,6 +45,7 @@ export default function Home() {
                         </OrderItems>
                         <PromoCode />
                         <Calculations />
+                        <OrderTotal />
                     </OrderSummay>
                 </Column>
             </MainWrapper>

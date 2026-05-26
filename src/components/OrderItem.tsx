@@ -1,12 +1,6 @@
+import { usdPriceFormatter } from "@/helpers";
 import type { Product } from "@/products";
 import Image from "next/image";
-
-const usdPriceFormatter = new Intl.NumberFormat("en-US", {
-    style: "currency",
-    currency: "USD",
-    minimumFractionDigits: 2,
-    maximumFractionDigits: 2,
-});
 
 export default function OrderItem({ product }: {
     product: Product;
