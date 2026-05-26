@@ -7,9 +7,10 @@ import FooterCopy from "@/components/FooterCopy";
 import FooterLogo from "@/components/FooterLogo";
 import FooterMenu from "@/components/FooterMenu";
 import MainWrapper from "@/components/MainWrapper";
+import OrderCopy from "@/components/OrderCopy";
 import OrderItem from "@/components/OrderItem";
 import OrderItems from "@/components/OrderItems";
-import OrderSummay from "@/components/OrderSummary";
+import OrderSummary from "@/components/OrderSummary";
 import OrderTotal from "@/components/OrderTotal";
 import PaymentMethods from "@/components/PaymentMethods";
 import PaymentOptions from "@/components/PaymentOptions";
@@ -37,7 +38,7 @@ export default function Home() {
                     </PaymentMethods>
                 </Column>
                 <Column className="w-full md:w-4/12">
-                    <OrderSummay>
+                    <OrderSummary>
                         <OrderItems>
                             {products.map(product => (
                                 <OrderItem key={product.id} product={product} />
@@ -46,7 +47,8 @@ export default function Home() {
                         <PromoCode />
                         <Calculations />
                         <OrderTotal />
-                    </OrderSummay>
+                        <OrderCopy />
+                    </OrderSummary>
                 </Column>
             </MainWrapper>
             <Footer>
