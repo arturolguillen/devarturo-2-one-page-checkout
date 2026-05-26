@@ -1,6 +1,10 @@
 import CardDetails from "@/components/CardDetails";
 import Column from "@/components/Column";
 import ContactInfo from "@/components/ContactInfo";
+import Footer from "@/components/Footer";
+import FooterCopy from "@/components/FooterCopy";
+import FooterLogo from "@/components/FooterLogo";
+import FooterMenu from "@/components/FooterMenu";
 import MainWrapper from "@/components/MainWrapper";
 import PaymentMethods from "@/components/PaymentMethods";
 import PaymentOptions from "@/components/PaymentOptions";
@@ -29,6 +33,11 @@ export default function Home() {
                     <></>
                 </Column>
             </MainWrapper>
+            <Footer>
+                <FooterLogo />
+                <FooterMenu />
+                <FooterCopy />
+            </Footer>
         </>
     );
 }
