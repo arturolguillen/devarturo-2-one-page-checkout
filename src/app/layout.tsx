@@ -19,7 +19,7 @@ export default function RootLayout({
     return (
         <html
             lang="en"
-            className={`${SpaceGrotesk.className} antialiased bg-zinc-50 text-zinc-900`}
+            className={`${SpaceGrotesk.className} antialiased bg-zinc-50 text-zinc-900 pb-39 lg:pb-0`}
         >
             <body className="flex flex-col min-h-dvh">{children}</body>
         </html>

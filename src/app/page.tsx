@@ -22,6 +22,7 @@ import TopAppBarLogo from "@/components/TopAppBarLogo";
 import TopAppBarSteps from "@/components/TopAppBarSteps";
 import CheckoutProvider from "@/components/CheckoutProvider";
 import products from "@/products";
+import PayButton from "@/components/PayButton";
 
 export default function Home() {
     return (
@@ -50,6 +51,7 @@ export default function Home() {
                             <PromoCode />
                             <Calculations />
                             <OrderTotal />
+                            <PayButton />
                             <OrderCopy />
                         </OrderSummary>
                     </Column>
