@@ -16,9 +16,11 @@ import PaymentMethods from "@/components/PaymentMethods";
 import PaymentOptions from "@/components/PaymentOptions";
 import PromoCode from "@/components/PromoCode";
 import ShippingInfo from "@/components/ShippingInfo";
+import StickyOrderSummary from "@/components/StickyOrderSummary";
 import TopAppBar from "@/components/TopAppBar";
 import TopAppBarLogo from "@/components/TopAppBarLogo";
 import TopAppBarSteps from "@/components/TopAppBarSteps";
+import CheckoutProvider from "@/components/CheckoutProvider";
 import products from "@/products";
 
 export default function Home() {
@@ -29,7 +31,7 @@ export default function Home() {
                 <TopAppBarSteps />
             </TopAppBar>
             <MainWrapper>
-                <Column className="w-full md:w-8/12 flex flex-col gap-8">
+                <Column className="w-full lg:w-8/12 flex flex-col gap-8">
                     <ContactInfo />
                     <ShippingInfo />
                     <PaymentMethods>
@@ -37,19 +39,22 @@ export default function Home() {
                         <CardDetails />
                     </PaymentMethods>
                 </Column>
-                <Column className="w-full md:w-4/12">
-                    <OrderSummary>
-                        <OrderItems>
-                            {products.map(product => (
-                                <OrderItem key={product.id} product={product} />
-                            ))}
-                        </OrderItems>
-                        <PromoCode />
-                        <Calculations />
-                        <OrderTotal />
-                        <OrderCopy />
-                    </OrderSummary>
-                </Column>
+                <CheckoutProvider>
+                    <Column className="w-full lg:w-4/12 hidden lg:block">
+                        <OrderSummary>
+                            <OrderItems>
+                                {products.map(product => (
+                                    <OrderItem key={product.id} product={product} />
+                                ))}
+                            </OrderItems>
+                            <PromoCode />
+                            <Calculations />
+                            <OrderTotal />
+                            <OrderCopy />
+                        </OrderSummary>
+                    </Column>
+                    <StickyOrderSummary />
+                </CheckoutProvider>
             </MainWrapper>
             <Footer>
                 <FooterLogo />
